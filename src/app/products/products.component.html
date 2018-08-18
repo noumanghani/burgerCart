@@ -3,7 +3,7 @@
     <product-filter [category]="category"></product-filter>
   </div>
   <div class="col">
-    <div class="row">
+    <div class="row" *ngIf="cart$ | async as cart"><!-- get the cart observable, wrap it with async pipe & store it in cart-->
       <ng-container *ngFor="let p of filteredProducts; let i = index">
         <div class="col">
          <product-card [product]="p" [shopping-cart]="cart"></product-card>

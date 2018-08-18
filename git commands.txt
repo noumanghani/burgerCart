@@ -1,0 +1,24 @@
+
+Steps to create new branch:
+-create branch(create branch local)
+git checkout -b [bracnch name e.g shoppingCart]
+
+-check status(show the status of changed files)
+git status
+
+-git add (all files are staged due to .)
+git add .
+
+-git commit
+git commit -m "change status name e.g css change"
+
+-to make branch on git (create branch on server)
+git push origin [bracnch name e.g shoppingCart]
+
+-git checkout master(switch from branch to master)
+git checkout master
+
+-git pull 
+git pull
+
+
