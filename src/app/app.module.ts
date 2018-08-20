@@ -36,6 +36,8 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
 import {OrderService} from "./shared/services/order.service";
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
 import { ShippingFormComponent } from './shipping-form/shipping-form.component';
+import {ConfigService} from "shared/services/config.service";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
     declarations: [
@@ -67,6 +69,7 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
         AngularFireModule.initializeApp(environment.firebase),
         AngularFireDatabaseModule,
         AngularFireAuthModule,
+        HttpModule,
         NgbModule.forRoot(),
         RouterModule.forRoot([
             {path: '', component: ProductsComponent},
@@ -108,8 +111,8 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
         CategoryService,
         ProductService,
         ShoppingCartService,
-        OrderService
-
+        OrderService,
+        ConfigService
     ],
     bootstrap: [AppComponent]
 })
