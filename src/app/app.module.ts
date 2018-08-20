@@ -11,10 +11,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomFormsModule } from 'ng2-validation';
 import { DataTableModule } from 'angular-4-data-table';
 
-import {AuthService} from './auth.service';
-import {AuthGuard} from './auth-guard.service';
+import {AuthService} from './shared/services/auth.service';
+import {AuthGuard} from './shared/services/auth-guard.service';
 import {AdminAuthGuard} from './admin-auth-guard.service';
-import {UserService} from './user.service';
+import {UserService} from './shared/services/user.service';
 import {AppComponent} from './app.component';
 import {TopNavbarComponent} from './top-navbar/top-navbar.component';
 import {HomeComponent} from './home/home.component';
@@ -27,13 +27,13 @@ import {AdminProductsComponent} from './admin/admin-products/admin-products.comp
 import {AdminOrdersComponent} from './admin/admin-orders/admin-orders.component';
 import {LoginComponent} from './login/login.component';
 import {ProductFormComponent} from './admin/product-form/product-form.component';
-import {CategoryService} from "./category.service";
-import {ProductService} from "./product.service";
+import {CategoryService} from "./shared/services/category.service";
+import {ProductService} from "./shared/services/product.service";
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
-import {ShoppingCartService} from "./shopping-cart.service";
+import {ShoppingCartService} from "./shared/services/shopping-cart.service";
 import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
-import {OrderService} from "./order.service";
+import {OrderService} from "./shared/services/order.service";
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
 import { ShippingFormComponent } from './shipping-form/shipping-form.component';
 
