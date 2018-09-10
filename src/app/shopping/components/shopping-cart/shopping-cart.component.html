@@ -1,56 +1,159 @@
-<h1>Shopping Cart</h1>
-<div class="row col-10" *ngIf="cart$ | async as cart">
-  <p>
-    You have {{ cart.totalItemsCount }} items in your shopping cart.
-    <button
-            *ngIf="cart.items.length"
-            (click)="clearCart()"
-            class="btn btn-light btn-sm">Clear Shopping Cart</button>
-  </p>
-  <table class="table">
-    <thead>
-    <tr>
-      <th></th>
-      <th>Product</th>
-      <th class="text-center">Quantity</th>
-      <th class="text-right">Price</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let item of cart.items">
-      <td>
-        <div>
-          <img [src]="item.imageUrl" class="thumbnail" alt="">
-        </div>
-        <!--<div [style.backgroundImage]="'url(' + item.imageUrl + ')'" class="thumbnail">-->
-        <!--</div>-->
-      </td>
-      <td>
-        {{ item.title }}
-      </td>
-      <td class="text-center">
-        <product-quantity [product]="item" [shopping-cart]="cart"></product-quantity>
-      </td>
-      <td class="text-right">
-        {{ item.totalPrice | currency: 'USD':true }}
-      </td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th class="text-right">
-        {{ cart.totalPrice | currency:'USD':true }}
-      </th>
-    </tr>
-    </tfoot>
-  </table>
-  <a
-    *ngIf="cart.items.length"
-    routerLink="/check-out"
-    class="btn btn-primary"
-  >Check Out</a>
+<!--<h1>Shopping Cart</h1>-->
+<!--<div class="row col-10" *ngIf="cart$ | async as cart">-->
+<!--<p>-->
+<!--You have {{ cart.totalItemsCount }} items in your shopping cart.-->
+<!--<button-->
+<!--*ngIf="cart.items.length"-->
+<!--(click)="clearCart()"-->
+<!--class="btn btn-light btn-sm">Clear Shopping Cart</button>-->
+<!--</p>-->
+<!--<table class="table">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th></th>-->
+<!--<th>Product</th>-->
+<!--<th class="text-center">Quantity</th>-->
+<!--<th class="text-right">Price</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr *ngFor="let item of cart.items">-->
+<!--<td>-->
+<!--<div>-->
+<!--<img [src]="item.imageUrl" class="thumbnail" alt="">-->
+<!--</div>-->
+<!--&lt;!&ndash;<div [style.backgroundImage]="'url(' + item.imageUrl + ')'" class="thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</td>-->
+<!--<td>-->
+<!--{{ item.title }}-->
+<!--</td>-->
+<!--<td class="text-center">-->
+<!--<product-quantity [product]="item" [shopping-cart]="cart"></product-quantity>-->
+<!--</td>-->
+<!--<td class="text-right">-->
+<!--{{ item.totalPrice | currency: 'USD':true }}-->
+<!--</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--<tfoot>-->
+<!--<tr>-->
+<!--<th></th>-->
+<!--<th></th>-->
+<!--<th></th>-->
+<!--<th class="text-right">-->
+<!--{{ cart.totalPrice | currency:'PKR':true }}-->
+<!--</th>-->
+<!--</tr>-->
+<!--</tfoot>-->
+<!--</table>-->
+<!--<a-->
+<!--*ngIf="cart.items.length"-->
+<!--routerLink="/check-out"-->
+<!--class="btn btn-primary"-->
+<!--&gt;Check Out</a>-->
 
+<!--</div>-->
+
+<div class="page-content">
+  <section class="section cart-sec-main">
+    <div class="container custom-container2">
+      <div class="row no-gutters" *ngIf="cart$ | async as cart">
+        <div class="col-md-8">
+          <div class="banner-main">
+            <h5>YOUR CART (<span>{{ cart.totalItemsCount }}</span>)</h5>
+            <button
+                    *ngIf="cart.items.length"
+                    (click)="clearCart()"
+                    class="btn btn-light btn-sm">Clear Shopping Cart
+            </button>
+            <table class="table cart">
+              <thead>
+              <tr>
+                <th scope="col" width="25%"><h6>ITEM DESCRIPTION</h6></th>
+                <th scope="col" width="45%">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th scope="col" class="text-quantity" width="15%"><h6>QUANTITY</h6></th>
+                <th scope="col" class="text-subttl" width="15%"><h6>SUBTOTAL</h6></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of cart.items">
+                <td scope="row">
+                  <div class="image-holder pro-img">
+                    <img [src]="item.imageUrl" alt="..."
+                         class="img-fluid"/>
+                  </div>
+                </td>
+                <td>
+                  {{ item.title }}
+                </td>
+                <td class="text-center">
+                  <product-quantity [product]="item" [shopping-cart]="cart"></product-quantity>
+                </td>
+                <td class="text-right">
+                  {{ item.totalPrice | currency: 'USD':true }}
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="white_bg cart_right">
+            <div class="date-picker">
+              <label for="date">Select date:</label>
+              <input type="date" id="date"/>
+            </div>
+            <br>
+            <div class="time-picker">
+              <label for="time">Select time:</label>
+              <input type="time" id="time"/>
+            </div>
+            <div class="cart-pay-sec">
+              <div class="mrgn-btm">
+                <p>3 * Chicken Super League</p>
+                <p class="float-right text-right">430</p>
+              </div>
+              <div class="mrgn-btm">
+                <p>2 * cheese</p>
+                <p class="float-right text-right">40</p>
+              </div>
+              <div class="mrgn-btm">
+                <p>1 * Pepsi</p>
+                <p class="float-right text-right">100</p>
+              </div>
+              <div class="mrgn-btm">
+                <p>Chicken Whopper</p>
+                <p class="float-right text-right">400</p>
+              </div>
+              <div class="bill-price-start">
+                <div class="mrgn-btm">
+                  <h5 class="font-weight-bold">
+                    SUBTOTAL
+                  </h5>
+                  <h5 class="float-right text-right">PKR <span class="grand_sub_total">1,300.00</span></h5>
+                </div>
+                <div class="mrgn-btm">
+                  <h5 class="font-weight-bold">
+                    DELIVERY FEE
+                  </h5>
+
+                  <h5 class="float-right text-right">PKR <span>0.00</span></h5>
+                </div>
+                <br>
+                <div class="mrgn-btm last_row">
+                  <h5 class="font-weight-bold">TOTAL</h5>
+
+                  <h5 class="font-weight-bold float-right text-right">PKR <span
+                          class="full_total">1,300.00</span></h5>
+                </div>
+              </div>
+            </div>
+            <button class="btn-process process_pay"><p>PROCESS TO PAYMENT</p></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

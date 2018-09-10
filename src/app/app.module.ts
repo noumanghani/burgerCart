@@ -13,6 +13,7 @@ import {SharedModule} from "shared/shared.module";
 import {AdminModule} from "./admin/admin.module";
 import {ShoppingModule} from "./shopping/shopping.module";
 import {CoreModule} from "./core/core.module";
+import {HomeComponent} from "./core/components/home/home.component";
 
 @NgModule({
     declarations: [
@@ -29,7 +30,7 @@ import {CoreModule} from "./core/core.module";
         AngularFireModule.initializeApp(environment.firebase),
         HttpModule,
         RouterModule.forRoot([
-            {path: '', component: ProductsComponent},
+            {path: '', component: HomeComponent},
             {path: 'login', component: LoginComponent},
         ])
     ],
