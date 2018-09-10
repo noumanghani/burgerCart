@@ -9,6 +9,14 @@
                 </div>
             </div>
             <div class="form-group">
+                <label for="description">Description</label>
+                <input #description="ngModel" [(ngModel)]="product.description" name="description" id="desc" description="text" class="form-control" required>
+                <div class="alert alert-danger" *ngIf="description.touched && description.invalid" >
+                    This is required.
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label for="price">Price</label>
                 <div class="input-group">
                     <span class="input-addon-group">$</span>

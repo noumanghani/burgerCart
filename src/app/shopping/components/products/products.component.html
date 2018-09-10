@@ -1,18 +1,245 @@
-<div class="row">
-  <div class="col-3">
-    <product-filter [category]="category"></product-filter>
-  </div>
-  <div class="col">
-    <div class="row" *ngIf="cart$ | async as cart"><!-- get the cart observable, wrap it with async pipe & store it in cart-->
-      <ng-container *ngFor="let p of filteredProducts; let i = index">
-        <div class="col">
-         <product-card [product]="p" [shopping-cart]="cart"></product-card>
-        </div>
-        <div *ngIf="(i + 1)%2 === 0" class="w-100"></div>
-      </ng-container>
+<!--<div class="row">-->
+  <!--<div class="col-3">-->
+    <!--<product-filter [category]="category"></product-filter>-->
+  <!--</div>-->
+  <!--<div class="col">-->
+    <!--<div class="row" *ngIf="cart$ | async as cart">&lt;!&ndash; get the cart observable, wrap it with async pipe & store it in cart&ndash;&gt;-->
+    <!--<ng-container *ngFor="let p of filteredProducts; let i = index">-->
+    <!--<div class="col">-->
+    <!--<product-card [product]="p" [shopping-cart]="cart"></product-card>-->
+    <!--</div>-->
+    <!--<div *ngIf="(i + 1)%2 === 0" class="w-100"></div>-->
+    <!--</ng-container>-->
 
-    </div>
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+  <div class="page-content">
+    <section class="section menu-sec-main">
+      <div class="container custom-container">
+        <div class="row" *ngIf="cart$ | async as cart">
+          <!-- Modal -->
+          <div class="modal fade add-product" id="add-product" tabindex="-1" role="dialog"
+               aria-labelledby="add-productCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="container custom-container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h3 class="modal-title" id="add-productCenterTitle">Chicken Super
+                          League</h3>
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close">
+                          <span aria-hidden="true">
+                              <img class="img-thumbnail img-fluid"
+                                   src="http://hopenotout.pk/burger/uploads/images/close-btn.png"/>
+                          </span>
+                        </button>
+                        <div>
+                          <h5>PKR <span>500.00</span></h5>
+                        </div>
+                        <div class="input-group">
+                                                          <span class="input-group-btn">
+                                                              <button type="button" class="btn btn-default btn-number"
+                                                                      disabled="disabled" data-type="minus"
+                                                                      data-field="bgr_quant">
+                                                                  <span class="fa fa-minus"></span>
+                                                              </button>
+                                                          </span>
+                          <input type="text" name="bgr_quant"
+                                 class="form-control input-number" value="1" min="1"
+                                 max="10"/>
+                          <span class="input-group-btn">
+                                                              <button type="button" class="btn btn-default btn-number"
+                                                                      data-type="plus" data-field="bgr_quant">
+                                                                  <span class="fa fa-plus"></span>
+                                                              </button>
+                                                          </span>
+                        </div>
+                        <p>Chicken or beef whooper, spicy crispy chicken burger.</p>
+                        <table class="extras">
+                          <thead>
+                          <tr>
+                            <td>
+                              <p class="font-weight-bold font-italic">* Extras</p>
+                            </td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>
+                              <p class="font-italic">Plain Fries</p>
+                            </td>
+                            <td>
+                              <p class="font-italic text-right">50 PKR</p>
+                            </td>
+                            <td>
+                              <div class="input-group float-right">
+                                                                      <span class="input-group-btn">
+                                                                          <button type="button"
+                                                                                  class="btn btn-default btn-number"
+                                                                                  disabled="disabled" data-type="minus"
+                                                                                  data-field="fries_quant">
+                                                                              <span class="fa fa-minus"></span>
+                                                                          </button>
+                                                                      </span>
+                                <input type="text" name="fries_quant"
+                                       class="form-control input-number" value="1"
+                                       min="1" max="10"/>
+                                <span class="input-group-btn">
+                                                                          <button type="button"
+                                                                                  class="btn btn-default btn-number"
+                                                                                  data-type="plus"
+                                                                                  data-field="fries_quant">
+                                                                              <span class="fa fa-plus"></span>
+                                                                          </button>
+                                                                      </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="font-italic">Extra Cheese</p>
+                            </td>
+                            <td>
+                              <p class="font-italic text-right">100 PKR</p>
+                            </td>
+                            <td>
+                              <div class="input-group float-right">
+                                                                      <span class="input-group-btn">
+                                                                          <button type="button"
+                                                                                  class="btn btn-default btn-number"
+                                                                                  disabled="disabled" data-type="minus"
+                                                                                  data-field="chs_quant">
+                                                                              <span class="fa fa-minus"></span>
+                                                                          </button>
+                                                                      </span>
+                                <input type="text" name="chs_quant"
+                                       class="form-control input-number" value="1"
+                                       min="1" max="10"/>
+                                <span class="input-group-btn">
+                                                                          <button type="button"
+                                                                                  class="btn btn-default btn-number"
+                                                                                  data-type="plus" data-field="chs_quant">
+                                                                              <span class="fa fa-plus"></span>
+                                                                          </button>
+                                                                      </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="font-italic">Water</p>
+                            </td>
+                            <td>
+                              <p class="font-italic text-right"></p>
+                            </td>
+                            <td>
+                              <div class="input-group float-right">
+                                                                      <span class="input-group-btn">
+                                                                          <button type="button"
+                                                                                  class="btn btn-default btn-number"
+                                                                                  disabled="disabled" data-type="minus"
+                                                                                  data-field="wtr_quant">
+                                                                              <span class="fa fa-minus"></span>
+                                                                          </button>
+                                                                      </span>
+                                <input type="text" name="wtr_quant"
+                                       class="form-control input-number" value="1"
+                                       min="1" max="10"/>
+                                <span class="input-group-btn">
+                                                                          <button type="button"
+                                                                                  class="btn btn-default btn-number"
+                                                                                  data-type="plus" data-field="wtr_quant">
+                                                                              <span class="fa fa-plus"></span>
+                                                                          </button>
+                                                                      </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="font-italic">Drink</p>
+                            </td>
+                            <td>
+                              <p class="font-italic text-right"></p>
+                            </td>
+                            <td>
+                              <div class="input-group float-right">
+                                                                      <span class="input-group-btn">
+                                                                          <button type="button"
+                                                                                  class="btn btn-default btn-number"
+                                                                                  disabled="disabled" data-type="minus"
+                                                                                  data-field="drnk_quant">
+                                                                              <span class="fa fa-minus"></span>
+                                                                          </button>
+                                                                      </span>
+                                <input type="text" name="drnk_quant"
+                                       class="form-control input-number" value="1"
+                                       min="1" max="10"/>
+                                <span class="input-group-btn">
+                                                                          <button type="button"
+                                                                                  class="btn btn-default btn-number"
+                                                                                  data-type="plus"
+                                                                                  data-field="drnk_quant">
+                                                                              <span class="fa fa-plus"></span>
+                                                                          </button>
+                                                                      </span>
+                              </div>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="ttl-pay">
+                          <h4 class="float-left">Total Payment</h4>
+                          <h4 class="float-right">PKR <span>700.00</span></h4>
+                        </div>
+                        <button class="btn btn-add" type="button"><p>ADD TO CART</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal ends-->
+          <div class="col-md-6 menu-pro-banner">
+            <div class="banner-main">
+              <div class="banner-holder">
+                <img class="img-fluid img-thumbnail" src="http://hopenotout.pk/burger/uploads/images/burger-banner.jpg"/>
+              </div>
+            </div>
+          </div>
+          <ng-container *ngFor="let p of filteredProducts; let i = index">
+            <div class="col-md-3 menu-product">
+              <product-card [product]="p" [shopping-cart]="cart"></product-card>
+            </div>
+            <!--<div *ngIf="(i + 1)%2 === 0" class="w-100"></div>-->
+          </ng-container>
+
+        </div>
+        <div class="row">
+          <div class="col-md-6 menu-pro-banner">
+            <div class="banner-main">
+              <div class="banner-holder">
+                <img class="img-fluid img-thumbnail"
+                     src="http://hopenotout.pk/burger/uploads/images/burger-banner-2.jpg"/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
   </div>
-</div>
 
 

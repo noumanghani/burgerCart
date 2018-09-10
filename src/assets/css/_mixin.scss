@@ -1,0 +1,45 @@
+//* Variable arguments for functions/mixins *//
+@mixin config-button-bgcolors($prefix, $colors...) {
+  @each $i in $colors {
+    .#{$prefix}#{nth($i, 1)} {
+      background-color: nth($i, 2);
+      border: none;
+    }
+  }
+}
+
+//* box shadows *//
+@mixin box-shadow($shadows...) {
+  -o-box-shadow: $shadows;
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+//* text shadows *//
+@mixin text-shadow($shadows...) {
+  text-shadow: $shadows;
+}
+
+//* colors *//
+@mixin colors($text, $background, $border) {
+  color: $text;
+  background-color: $background;
+  border-color: $border;
+}
+
+//* padding *//
+$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 75, 80, 90, 100); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}

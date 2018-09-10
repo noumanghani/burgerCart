@@ -1,0 +1,761 @@
+/*========================================================
+================== RESPONSIVE QUERIES===============*/
+
+/*------------------------------------------------
+2560
+------------------------------------------------*/
+@media (min-width: 2000px) and (max-width: 2560px) {
+  .about-main .banner-holder {
+    height: 65rem;
+    background-size: contain;
+    background-position: 100% 45%;
+    //margin-top: 11rem;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+  }
+}
+
+/*------------------------------------------------
+1921
+------------------------------------------------*/
+@media (min-width: 1921px) {
+
+}
+
+/*------------------------------------------------
+1920
+------------------------------------------------*/
+@media (min-width: 1920px) {
+  .about-main .banner-holder {
+    height: 65rem;
+    background-size: contain;
+    background-image: url("http://hopenotout.pk/burger/uploads/images/about-main-bg.jpg");
+    background-position: 100% 25%;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    //margin-top: 10rem;
+  }
+}
+
+/*------------------------------------------------
+1800
+------------------------------------------------*/
+@media (min-width: 1800px) {
+  .custom-container {
+    max-width: 1700px;
+    width: 100%;
+  }
+  .custom-container2 {
+    max-width: 1700px;
+    width: 100%;
+  }
+}
+
+/*------------------------------------------------
+1799
+------------------------------------------------*/
+@media screen and (max-width: 1799px) {
+  h1 {
+    font-size: 9rem;
+  }
+  h3 {
+    font-size: 3.75rem;
+  }
+  .custom-container {
+    max-width: 100%;
+    width: 90%;
+  }
+  .custom-container2 {
+    max-width: 1700px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .home-sec-2 .text-holder {
+    padding-top: 25%;
+  }
+  .home-sec-3 .text-side {
+    padding: 13rem;
+  }
+  .home-sec-3 .image-side .text-holder {
+    padding-top: 13rem;
+    top: 0;
+  }
+  .home-sec-5 .product-holder {
+    padding: 3rem;
+  }
+  .home-sec-4 .truck-img img {
+    width: 60%;
+  }
+  .home-sec-5 .product-holder .pro-img img {
+    width: 60%;
+  }
+}
+
+/*------------------------------------------------
+1700
+------------------------------------------------*/
+@media (min-width: 1700px) {
+  .about-main .banner-holder {
+    height: 56.5rem;
+    background-size: contain;
+    background-position: 100% 25%;
+  }
+}
+
+/*------------------------------------------------
+1699
+------------------------------------------------*/
+@media screen and (max-width: 1699px) {
+  html {
+    font-size: 52.5% !important;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  .about-main .banner-holder {
+    background-size: contain;
+    background-position: 100% 15%;
+  }
+}
+
+/*------------------------------------------------
+1600
+------------------------------------------------*/
+@media (max-width: 1600px) {
+  .about-sec-2 .text-holder {
+    padding: 12rem 12rem 0;
+  }
+  .about-sec-3 .text-holder {
+    padding: 9rem 9rem 0;
+  }
+}
+
+/*------------------------------------------------
+1499
+------------------------------------------------*/
+@media (max-width: 1499px) {
+
+}
+
+/*------------------------------------------------
+1400
+------------------------------------------------*/
+@media (max-width: 1400px) {
+  h5 {
+    font-size: 2rem;
+  }
+  h6 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  header .navbar-light .navbar-brand img {
+    width: 75%;
+  }
+  header .navbar {
+    padding: 0
+  }
+  header .main-sticky-nav {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .home-sec-3 .text-side {
+    padding: 10rem;
+  }
+  .home-sec-3 .image-side .text-holder {
+    padding-top: 10rem;
+  }
+  .social-holder ul i {
+    font-size: 2rem;
+  }
+  .about-main .banner-holder {
+    height: 50rem;
+    background-size: contain;
+    background-position: 100% 5%;
+    //margin-top: 7.5rem;
+  }
+}
+
+/*------------------------------------------------
+1300
+------------------------------------------------*/
+@media screen and (max-width: 1699px) and (min-width: 1300px) {
+  .custom-container2 {
+    //max-width: 1260px;
+  }
+
+}
+
+/*------------------------------------------------
+1439
+------------------------------------------------*/
+@media (max-width: 1439px) {
+  .home-sec-4 .banner-holder .t-resting, .home-sec-4 .banner-holder .summer-next {
+    padding: 6rem 6rem 0;
+  }
+  .menu-sec-main .product-holder {
+    margin: 0 0 8rem 0;
+  }
+  .shipment-sec-main .banner-main {
+    padding: 5rem 10rem;
+  }
+}
+
+/*------------------------------------------------
+1366
+------------------------------------------------*/
+@media screen and (width: 1366px) {
+
+}
+
+/*------------------------------------------------
+1300
+------------------------------------------------*/
+@media screen and (max-width: 1299px) {
+  .about-main .banner-holder {
+    height: 50rem;
+    background-size: contain;
+    background-position: 100% 10%;
+    //margin-top: 7.5rem;
+  }
+}
+
+/*------------------------------------------------
+1200
+------------------------------------------------*/
+@media (width: 1200px) {
+
+}
+
+/*------------------------------------------------
+1199
+------------------------------------------------*/
+@media (max-width: 1199px) {
+  h1 {
+    font-size: 6.5rem;
+  }
+  h3 {
+    font-size: 3.25rem;
+  }
+  p {
+    font-size: 1.85rem;
+  }
+  header .main-sticky-nav .navbar .nav-link {
+    padding: 0 1.4rem;
+  }
+  header .navbar-brand img {
+    width: 75%;
+  }
+  .home-sec-2 h1 {
+    width: 80%;
+  }
+  .home-sec-2 h6 {
+    width: 80%;
+  }
+  .home-sec-3 .text-side {
+    padding: 6rem 8rem 0;
+  }
+  .home-sec-3 .image-side .text-holder {
+    padding-top: 6rem;
+  }
+  .home-sec-4 .text-side .text-holder {
+    padding-left: 6rem;
+  }
+  [class*="btn-"] {
+    padding: 1.2rem 2.2rem;
+  }
+  .about-sec-2 .text-holder {
+    padding: 10rem 10rem 0;
+  }
+  .cart-sec-main .btn-edit, .cart-sec-main .btn-remove {
+    margin-top: 2rem;
+  }
+}
+
+/*------------------------------------------------
+1059
+------------------------------------------------*/
+@media screen and (max-width: 1059px) {
+  .shipment-sec-main .banner-main {
+    padding: 5rem;
+  }
+}
+
+/*------------------------------------------------
+1024x1366 ipad pro screen
+------------------------------------------------*/
+@media screen and (width: 1024px) and (height: 1366px) {
+  body::after {
+    content: "Please switch to landscape view";
+    color: $black;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    z-index: 100000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 5rem;
+    font-family: "Montserrat-Bold", sans-serif;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+}
+
+/*------------------------------------------------
+992
+------------------------------------------------*/
+@media (min-width: 992px) {
+
+}
+
+/*------------------------------------------------
+991
+------------------------------------------------*/
+@media (max-width: 991px) {
+  html {
+    font-size: 45% !important;
+  }
+  header .nav-login-cart {
+    justify-content: flex-start;
+  }
+  header .navbar-nav {
+    padding-top: 2rem;
+  }
+  header .main-sticky-nav .navbar .nav-link {
+    margin-bottom: 1rem;
+  }
+  header .navbar-light .navbar-toggler {
+    padding: 1rem;
+    margin-right: 2rem;
+    span {
+      margin: 0;
+    }
+    .navbar-toggler-icon {
+      width: 2em;
+      height: 2em;
+    }
+  }
+  footer .text-side .text-holder {
+    margin-top: 15%;
+    margin-right: 5rem;
+  }
+  .custom-container {
+    width: 100%;
+  }
+  .custom-container2 {
+    width: 100%;
+  }
+  [class*="btn-"] {
+    margin-top: 3rem;
+  }
+  .home-sec-3 .text-side {
+    padding: 6rem 4rem 0 8rem;
+  }
+  .home-sec-4 .banner-holder .t-resting, .home-sec-4 .banner-holder .summer-next {
+    padding: 6rem 4rem 0rem;
+  }
+  .social-holder ul i {
+    font-size: 2rem;
+  }
+  .menu-product {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .menu-pro-banner {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .menu-pro-banner .banner-holder {
+    text-align: center;
+  }
+  .menu-sec-main .banner-holder img {
+    width: 55%;
+  }
+  .menu-sec-main .product-holder .pro-img img {
+    width: 50%;
+  }
+  .about-main .banner-holder {
+    height: 40rem;
+    background-size: contain;
+    background-position: 100% 5%;
+    //margin-top: 7.5rem;
+  }
+}
+
+/*------------------------------------------------
+800x 1280 screen
+------------------------------------------------*/
+@media screen and (width: 800px) and (height: 1280px) {
+
+}
+
+/*------------------------------------------------
+768
+------------------------------------------------*/
+@media (min-width: 768px) {
+
+}
+
+/*------------------------------------------------
+768x 1024 ipad screen
+------------------------------------------------*/
+@media screen and (width: 768px) and (height: 1024px) {
+  body::after {
+    content: "Please switch to landscape view";
+    color: $black;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    z-index: 100000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 5rem;
+    font-family: "Montserrat-Bold", sans-serif;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+}
+
+/*------------------------------------------------
+800
+------------------------------------------------*/
+@media (max-width: 800px) {
+  .home-sec-2 .text-holder {
+    padding-left: 6rem;
+  }
+  .home-sec-3 .text-side {
+    padding: 4rem 2rem 0 5rem;
+  }
+  .home-sec-3 .image-side .text-holder {
+    padding-top: 4rem;
+  }
+  .home-sec-4 .banner-holder .t-resting, .home-sec-4 .banner-holder .summer-next {
+    padding: 3rem 3rem 0rem;
+  }
+  .about-main .banner-holder {
+    height: 35rem;
+    background-size: contain;
+    background-position: 100% 5%;
+    //margin-top: 5rem;
+  }
+}
+
+/*------------------------------------------------
+768
+------------------------------------------------*/
+@media (max-width: 768px) {
+
+}
+
+/*------------------------------------------------
+767
+------------------------------------------------*/
+@media (max-width: 767px) {
+  .home-sec-2 .image-holder.fire {
+    width: 35%;
+  }
+  .home-sec-2 .text-holder {
+    padding-top: 15%;
+  }
+  .home-sec-3 .text-side {
+    padding: 6rem;
+  }
+  .home-sec-4 .text-side .text-holder {
+    position: relative;
+    padding: 6rem;
+  }
+  .home-sec-5 .product-holder {
+    padding: 5rem 20%;
+  }
+  header .main-sticky-nav .navbar .nav-link {
+    padding: 0 1rem;
+  }
+  footer .text-side .text-holder {
+    margin: 6rem;
+    margin-bottom: 15%;
+  }
+  .menu-product {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .menu-pro-banner {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .menu-pro-banner .banner-holder {
+    text-align: center;
+  }
+  .menu-sec-main .banner-holder img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .menu-sec-main .product-holder .pro-img img {
+    width: 50%;
+  }
+  .menu-sec-main .product-holder {
+    margin: 2rem 0;
+  }
+  .about-main .banner-holder {
+    height: 65rem;
+    background-size: cover;
+    background-position: 100% 5%;
+    //margin-top: 5rem;
+  }
+  .about-main .text-holder {
+    position: relative;
+    background-color: $blue;
+    padding: 5rem;
+  }
+  .about-main .bgr-stry {
+    padding: 3.5rem 4rem 0;
+    margin-top: 2rem;
+  }
+  .about-main .bgr-stry::before {
+    width: 5rem;
+  }
+  .about-sec-2 .text-holder {
+    padding: 5rem 5rem 0;
+  }
+  .about-sec-3 .text-holder {
+    padding: 5rem 5rem 0;
+  }
+  .about-sec-3 h6 {
+    margin-top: 5rem;
+  }
+  .about-sec-3 h3 {
+    padding-right: 0;
+  }
+  .about-sec-4 h2, p, .btn-order-trans {
+    vertical-align: middle;
+  }
+  .custom-inputs .form-group {
+    &.p-r-60 {
+      padding-right: 0 !important;
+    }
+    &.p-l-60 {
+      padding-left: 0 !important;
+    }
+  }
+  .details-sec-main {
+    margin-top: 3rem;
+  }
+  .shipment-sec-main .form-details {
+    .p-r-10 {
+      padding: 0 5px !important;
+    }
+    .p-l-10 {
+      padding: 0 5px !important;
+    }
+  }
+  .shipment-sec-main .banner-main h5, .shipment-sec-main .banner-main a {
+    display: block;
+    //float: left !important;
+    //margin-bottom: 1rem;
+  }
+  .shipment-sec-main .banner-main a {
+    float: left !important;
+    margin: 1rem 0;
+  }
+  .shipment-sec-main .banner-main .email-form-row {
+    margin-top: 3rem;
+  }
+  .shipment-sec-main {
+    margin-top: 2rem;
+  }
+}
+
+/*------------------------------------------------
+600
+------------------------------------------------*/
+@media (max-width: 600px) {
+  .custom-container2 {
+    max-width: 100%;
+    width: 100%;
+  }
+  header .navbar-light .navbar-brand img {
+    width: 100%;
+  }
+  .about-sec-2 h2 {
+    padding-right: 0;
+  }
+  .about-sec-2 p {
+    padding-right: 0;
+    margin-top: 0;
+  }
+  .about-sec-3 h6 {
+    margin-top: 2rem;
+    padding-left: 0;
+  }
+  .about-sec-4 {
+    .text-holder {
+      display: block;
+    }
+    h2, p.para, .btn-order-trans {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+    h2, p.para {
+      padding-bottom: 2rem;
+    }
+  }
+  .cart-sec-main table.cart {
+    overflow: visible;
+    overflow-x: scroll;
+    clear: both;
+    position: relative;
+    display: block;
+    table-layout: auto;
+    width: 700px;
+  }
+  table.order {
+    overflow: visible;
+    overflow-x: scroll;
+    clear: both;
+    position: relative;
+    //display: block;
+    table-layout: auto;
+    width: 700px;
+  }
+}
+
+/*------------------------------------------------
+575
+------------------------------------------------*/
+@media (max-width: 575px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.75rem;
+  }
+  h6 {
+    font-size: 1.95rem;
+  }
+  p {
+    font-size: 1.75rem;
+  }
+  footer .text-side .text-holder {
+    margin: 6rem;
+    margin-bottom: 20%;
+  }
+  .pg-sec-main .text-center {
+    padding: 0 2rem;
+  }
+  .menu-sec-main .product-holder .pro-img img {
+    width: 60%;
+  }
+  header .nav-login-cart .nav-link {
+    p {
+      display: inline-flex;
+    }
+  }
+}
+
+/*------------------------------------------------
+554
+------------------------------------------------*/
+@media (max-width: 554px) {
+  .about-sec-2 .text-holder {
+    padding: 3rem 3rem 0;
+  }
+  .about-sec-3 .text-holder {
+    padding: 3rem 3rem 0;
+  }
+}
+
+/*------------------------------------------------
+500
+------------------------------------------------*/
+@media (max-width: 500px) {
+  .about-main .banner-holder {
+    height: 20rem;
+    background-size: contain;
+    background-position: 100% 5%;
+    //margin-top: 5rem;
+  }
+  .about-sec-2, .about-sec-3 {
+    .text-holder {
+      width: 100%;
+      padding: 5rem 4rem;
+    }
+    .image-holder {
+      display: none;
+    }
+  }
+  .about-main .bgr-stry::before {
+    left: 45%;
+  }
+  .about-main .text-holder {
+    padding: 3rem;
+  }
+}
+
+/*------------------------------------------------
+479
+------------------------------------------------*/
+@media (max-width: 479px) {
+
+}
+
+/*------------------------------------------------
+375
+------------------------------------------------*/
+@media (max-width: 375px) {
+  footer .text-side .text-holder {
+    margin: 4rem 3rem;
+    margin-bottom: 20%;
+  }
+  .home-sec-4 .banner-holder .t-resting, .home-sec-4 .banner-holder .summer-next {
+    padding: 1.75rem 1.75rem 0rem;
+  }
+  .about-main .banner-holder {
+    height: 15rem;
+    background-size: contain;
+    background-position: 100% 5%;
+    margin-top: 5rem;
+  }
+}
+
+/*------------------------------------------------
+350
+------------------------------------------------*/
+@media (max-width: 350px) {
+  .about-main .banner-holder {
+    height: 15rem;
+    background-size: contain;
+    background-position: 100% 10%;
+    margin-top: 5rem;
+  }
+  .about-main .text-holder {
+    padding: 3rem 1rem;
+  }
+}
+
+
+
+
+
+

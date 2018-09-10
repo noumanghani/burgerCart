@@ -1,17 +1,46 @@
-<div *ngIf="product.title" class="card">
-    <img *ngIf="product.imageUrl" class="card-img-top" src="{{ product.imageUrl }}" alt="{{product.title}}">
-    <div class="card-body">
-        <h5 class="card-title">{{product.title}}</h5>
-        <p class="card-text">{{product.price | currency:'USD':true}}</p>
-    </div>
-    <div *ngIf="showActions && shoppingCart" class="card-footer">
-        <button
-                *ngIf="shoppingCart.getQuantity(product) === 0; else updateQuantity"
-                (click)="addToCart()"
-                class="btn btn-secondary btn-block">Add to Cart
-        </button>
-        <ng-template #updateQuantity>
-            <product-quantity [product]="product" [shopping-cart]="shoppingCart"></product-quantity>
-        </ng-template>
-    </div>
+<!--<div *ngIf="product.title" class="card">-->
+<!--<img *ngIf="product.imageUrl" class="card-img-top" src="{{ product.imageUrl }}" alt="{{product.title}}">-->
+<!--<div class="card-body">-->
+<!--<h5 class="card-title">{{product.title}}</h5>-->
+<!--<h5 class="card-title">{{product.description}}</h5>-->
+<!--<p class="card-text">{{product.price | http://hopenotout.pk/burger/uploads/images/:true}}</p>-->
+<!--</div>-->
+<!--<div *ngIf="showActions && shoppingCart" class="card-footer">-->
+<!--<button-->
+<!--*ngIf="shoppingCart.getQuantity(product) === 0; else updateQuantity"-->
+<!--(click)="addToCart()"-->
+<!--class="btn btn-secondary btn-block">Add to Cart-->
+<!--</button>-->
+<!--<ng-template #updateQuantity>-->
+<!--<product-quantity [product]="product" [shopping-cart]="shoppingCart"></product-quantity>-->
+<!--</ng-template>-->
+<!--</div>-->
+<!--</div>-->
+
+<div *ngIf="product.title" class="product-holder">
+  <button class="btn-add" type="button"><h4>+</h4></button>
+  <div class="pro-img">
+    <img *ngIf="product.imageUrl" class="img-fluid img-thumbnail" src="{{ product.imageUrl }}" alt="{{product.title}}">
+  </div>
+  <div class="pro-name">
+    <h3>{{product.title}}</h3>
+  </div>
+  <div class="pro-desc">
+    <p>{{product.description}}</p>
+  </div>
+
+  <div class="pro-price">
+    <h5>PKR {{product.price}}</h5>
+  </div>
+  <div *ngIf="showActions && shoppingCart">
+    <button
+      *ngIf="shoppingCart.getQuantity(product) === 0; else updateQuantity"
+      (click)="addToCart()"
+      class="btn btn-secondary btn-block">Add to Cart
+    </button>
+    <ng-template #updateQuantity>
+      <product-quantity [product]="product" [shopping-cart]="shoppingCart"></product-quantity>
+    </ng-template>
+  </div>
 </div>
+
